@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 10, 2012 11:21:21 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="test" name="com.edw.bean.Mahasiswa" table="mahasiswa">
+    <id name="nim" type="string">
+      <column length="20" name="nim"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.edw.bean.Dosen" fetch="select" name="dosen">
+      <column length="20" name="kodedosen"/>
+    </many-to-one>
+    <property name="nama" type="string">
+      <column length="20" name="nama"/>
+    </property>
+  </class>
+</hibernate-mapping>
