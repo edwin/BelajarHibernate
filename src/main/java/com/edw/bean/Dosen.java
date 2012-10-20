@@ -13,7 +13,7 @@ public class Dosen  implements java.io.Serializable {
 
      private String kodedosen;
      private String namadosen;
-     private int usia;
+     private Integer usia;
      private Set mahasiswas = new HashSet(0);
 
     public Dosen() {
@@ -46,11 +46,11 @@ public class Dosen  implements java.io.Serializable {
     public void setNamadosen(String namadosen) {
         this.namadosen = namadosen;
     }
-    public int getUsia() {
+    public Integer getUsia() {
         return this.usia;
     }
     
-    public void setUsia(int usia) {
+    public void setUsia(Integer usia) {
         this.usia = usia;
     }
     public Set getMahasiswas() {
@@ -61,8 +61,10 @@ public class Dosen  implements java.io.Serializable {
         this.mahasiswas = mahasiswas;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Dosen{" + "kodedosen=" + kodedosen + ", namadosen=" + namadosen + ", usia=" + usia + ", mahasiswas=" + mahasiswas + '}';
+    }
 
 }
 
